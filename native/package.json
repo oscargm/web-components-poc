@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "owc-dev-server --app-index src/index.html --open src/index.html --watch"
+  },
+  "devDependencies": {
+    "owc-dev-server": "^1.0.0"
+  }
+}
