@@ -1,0 +1,40 @@
+{
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "postinstall": "vendor-copy"
+  },
+  "vendorCopy": [
+    {
+      "from": "node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js",
+      "to": "public/vendor/custom-elements-es5-adapter.js"
+    },
+    {
+      "from": "node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js",
+      "to": "public/vendor/webcomponents-bundle.js"
+    }
+  ],
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.10",
+    "vendor-copy": "^2.0.0"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "^3.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
