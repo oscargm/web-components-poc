@@ -17,11 +17,11 @@ cd ./fwk-folder && npm i && npm start
 
 ## Current status
 
-- Native <span style="color:green">Working</span>
-- React <span style="color:red">Not Working</span>
-- Native <span style="color:red">Not Working</span>
-- Native <span style="color:red">Not Working</span>
-- Native <span style="color:red">Not Working</span>
+- ![#a0fc00](https://placehold.it/15/a0fc00/000000?text=+) Native
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) React
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) Vue
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) Svelte
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) Angular
 
 ## Collaboration
 
