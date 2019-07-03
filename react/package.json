@@ -21,6 +21,7 @@
     "vendor-copy": "^2.0.0"
   },
   "dependencies": {
+    "lit-element": "^2.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "^3.0.1"
