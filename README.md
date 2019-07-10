@@ -26,3 +26,21 @@ cd ./fwk-folder && npm i && npm start
 ## Collaboration
 
 Feel free to work or submit PR
+
+## Native
+
+```bash
+cd ./native && npm i && npm start
+```
+
+## React
+
+```bash
+cd ./react-component && npm i && npm start
+```
+
+## Angular
+
+```bash
+cd ./angular && npm i && ng serve
+```
