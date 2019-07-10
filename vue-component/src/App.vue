@@ -1,17 +1,24 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <to-do-app />
+    <to-do-app :todos="todos" />
   </div>
 </template>
-<script src="./components/to-do/adaptor.js"></script>
 <script>
-import ToDo from "./components/to-do/adaptor.js";
+import "./components/to-do/to-do-app";
 
 export default {
   name: "app",
-  components: {
-    ToDo
+  data: function() {
+    return {
+      todos: [
+        { text: "Native WC", checked: true },
+        { text: "React WC", checked: false },
+        { text: "VueJS WC", checked: false },
+        { text: "Svelte WC", checked: false },
+        { text: "Angular WC", checked: false }
+      ]
+    };
   }
 };
 </script>

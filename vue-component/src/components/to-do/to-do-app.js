@@ -1,71 +1,71 @@
-import { html, css } from 'lit-element';
-import './to-do-item.js';
+import { html, css } from "lit-element";
+import "./to-do-item.js";
 
 class TodoApp extends HTMLElement {
-	static get properties() {
-		return {
-			todos: { type: Array }
-		};
-	}
+  static get properties() {
+    return {
+      todos: { type: Array }
+    };
+  }
 
-	constructor() {
-		super();
-		this.todos = [
-			{ text: 'Make a demo', checked: true },
-			{ text: 'The boring stuff', checked: false },
-			{ text: 'Setting properties', checked: false },
-			{ text: 'Setting attributes', checked: false },
-			{ text: 'Reflecting properties to attributes', checked: false },
-			{ text: 'Events', checked: false },
-			{ text: 'Wrap it up', checked: false }
-		];
-	}
+  constructor() {
+    super();
+    this.todos = [
+      { text: "Make a demo", checked: true },
+      { text: "The boring stuff", checked: false },
+      { text: "Setting properties", checked: false },
+      { text: "Setting attributes", checked: false },
+      { text: "Reflecting properties to attributes", checked: false },
+      { text: "Events", checked: false },
+      { text: "Wrap it up", checked: false }
+    ];
+  }
 
-	firstUpdated() {
-		this.$input = this.shadowRoot.querySelector('input');
-	}
+  firstUpdated() {
+    this.$input = this.shadowRoot.querySelector("input");
+  }
 
-	_removeTodo(e) {
-		this.todos = this.todos.filter((todo, index) => {
-			return index !== e.detail;
-		});
-	}
+  _removeTodo(e) {
+    this.todos = this.todos.filter((todo, index) => {
+      return index !== e.detail;
+    });
+  }
 
-	_toggleTodo(e) {
-		this.todos = this.todos.map((todo, index) => {
-			return index === e.detail ? { ...todo, checked: !todo.checked } : todo;
-		});
-	}
+  _toggleTodo(e) {
+    this.todos = this.todos.map((todo, index) => {
+      return index === e.detail ? { ...todo, checked: !todo.checked } : todo;
+    });
+  }
 
-	_addTodo(e) {
-		e.preventDefault();
-		if (this.$input.value.length > 0) {
-			this.todos = [ ...this.todos, { text: this.$input.value, checked: false } ];
-			this.$input.value = '';
-		}
-	}
+  _addTodo(e) {
+    e.preventDefault();
+    if (this.$input.value.length > 0) {
+      this.todos = [...this.todos, { text: this.$input.value, checked: false }];
+      this.$input.value = "";
+    }
+  }
 
-	static get styles() {
-		return css`
-			:host {
-				display: block;
-				font-family: sans-serif;
-				text-align: center;
-			}
-			button {
-				border: none;
-				cursor: pointer;
-				background-color: Transparent;
-			}
-			ul {
-				list-style: none;
-				padding: 0;
-			}
-		`;
-	}
+  static get styles() {
+    return css`
+      :host {
+        display: block;
+        font-family: sans-serif;
+        text-align: center;
+      }
+      button {
+        border: none;
+        cursor: pointer;
+        background-color: Transparent;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+    `;
+  }
 
-	render() {
-		return html`
+  render() {
+    return html`
       <h3>Web Components with lit-html</h3>
       <br>
       <h1>To do</h1>
@@ -75,7 +75,7 @@ class TodoApp extends HTMLElement {
       </form>
       <ul id="todos">
           ${this.todos.map(
-				(todo, index) => html`
+            (todo, index) => html`
               <to-do-item
                 ?checked=${todo.checked}
                 .index=${index}
@@ -85,9 +85,9 @@ class TodoApp extends HTMLElement {
               >
               </to-do-item>
             `
-			)}
+          )}
       </ul>
     `;
-	}
+  }
 }
-export default TodoApp;
+export default customElements.define("to-do-app", TodoApp);

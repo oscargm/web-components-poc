@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@vue/web-component-wrapper": "^1.2.0",
+    "babel-preset-es2015": "^6.24.1",
     "core-js": "^2.6.5",
     "lit-element": "^2.2.0",
     "vue": "^2.6.10"
